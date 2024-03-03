@@ -1,0 +1,90 @@
+:root {
+  font-family: "IBM Plex Mono", monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+figure {
+  padding: 0;
+  margin: 0;
+}
+
+figcaption {
+  font-size: 14px;
+}
+
+.LightTheme {
+  --color-link: hsla(224, 100%, 45%);
+  --color-link-active: hsla(0, 0%, 100%);
+  --color-link-background: hsla(0, 100%, 0%, 0.1);
+
+  --padding-link: 4px 8px;
+  --border-radius-small: 4px;
+  --padding-main-h: 8px;
+  --padding-main-v: 8px;
+}
+
+.Body {
+  display: flex;
+  flex-direction: column;
+}
+
+.Header {
+  flex: 0 0 auto;
+  padding: var(--padding-main-h) var(--padding-main-v);
+}
+
+.Main {
+  flex: 1;
+  padding: 0 var(--padding-main-v);
+}
+
+.Footer {
+  flex-shrink: 1;
+  padding: var(--padding-main-h) var(--padding-main-v);
+}
+
+.Nav {
+  display: flex;
+  align-items: center;
+}
+
+.Link {
+  color: var(--color-link);
+  padding: var(--padding-link);
+  border-radius: var(--border-radius-small);
+}
+
+.Link:hover {
+  background-color: var(--color-link-background);
+}
+
+.Link--current {
+  font-weight: 800;
+}
+
+.Home__greet--layout {
+  padding-top: 8px;
+}
+
+.Home__image {
+  min-width: 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Home__content {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}

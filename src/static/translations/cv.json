@@ -1,0 +1,53 @@
+{
+  "ru": {
+    "seo": {
+      "title": "Резюме | Андрей Парфенов",
+      "description": "Резюме"
+    },
+    "title": "Резюме | Андрей Парфенов",
+    "name": "Андрей Парфенов",
+    "profession": "Разработчик интерфейсов",
+    "programmingLanguages": "Языки программирования",
+    "programmingLanguagesList": ["js", "php", "html", "css", "sql"],
+    "frameworks": "Фреймворки",
+    "frameworksList": ["react", "vue", "svelte"],
+    "restSection": "Остальное",
+    "skills": "Навыки",
+    "jobExperience": "Опыт работы",
+    "education": "Образование",
+    "currentTime": "текущее время",
+    "noResume": "Резюме нет",
+    "VKJobName": "ВКонтакте",
+    "jobVK": [
+      "Делаю ленту и раздел друзей(старый)",
+      "Сделал несколько компонентов для постов",
+      "Делал отправку событий статистики ленты"
+    ],
+    "KoshelekJobName": "Кошелек.ру",
+    "jobKoshelek": {
+      "text": "Разработка vue компонентов",
+      "text2": "Работа с ssr, микросервисной архитектурой, webpack module federation",
+      "text3": "Написание unit/e2e тестов для vue компонентов",
+      "text4": "Сделал новый раздел на сайте, редактор статей, сервис авторизации"
+    },
+    "RozarioJobName": "Розарио",
+    "jobRozario": {
+      "text": "Разработка компонентов на svelte",
+      "text2": "Написание тестов unit/e2e",
+      "text3": "Разработал почти все компоненты",
+      "text4": "Валидация форм"
+    },
+    "SportmarketJobName": "Спортмаркет",
+    "jobSportmarket": {
+      "text": "разработал блог для интернет магазина (react)",
+      "text2": "верстка html/css, скрипты на js, react."
+    },
+    "SeventtestJobName": "Севентест",
+    "jobSeventest": {
+      "text": "разрботка системы мониторинга сетей на с++"
+    },
+    "university": "СПБГУТ",
+    "faculty": "ИКСС",
+    "program": "Программная инженерия"
+  }
+}
