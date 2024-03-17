@@ -71,4 +71,4 @@ use Mysite\Lib\Translation;
 </section>
 <?php $page_main = ob_get_clean() ?>
 
-<?php include FileUtils::commonDir('/templates/Layout.php') ?>
+<?php include FileUtils::common_dir('/templates/Layout.php') ?>

@@ -31,11 +31,15 @@ figcaption {
   --border-radius-small: 4px;
   --padding-main-h: 8px;
   --padding-main-v: 8px;
+
+  --max-width: 768px;
 }
 
 .Body {
   display: flex;
   flex-direction: column;
+  max-width: var(--max-width);
+  margin: 0 auto;
 }
 
 .Header {

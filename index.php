@@ -4,7 +4,9 @@ require_once __DIR__ . '/vendor/autoload.php';
 use Mysite\Features\Home\HomeController;
 use Mysite\Features\CV\CVController;
 use Mysite\Lib\Translation;
+use Mysite\Lib\AppConfig;
 
+AppConfig::init();
 Translation::init();
 
 // TODO: make better router

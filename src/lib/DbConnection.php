@@ -17,18 +17,18 @@ class DbConnection
      */
     public function connect()
     {
-        $params = parse_ini_file($_SERVER['DOCUMENT_ROOT'] . "/src/configuration/database.ini");
-        if ($params === false) {
+        $db_config = AppConfig::config('database');
+        if ($db_config === false) {
             throw new \Exception("Error reading database configuration file");
         }
 
         $connection_string = sprintf(
             "pgsql:host=%s;port=%d;dbname=%s;user=%s;password=%s",
-            $params['host'],
-            $params['port'],
-            $params['database'],
-            $params['user'],
-            $params['password']
+            $db_config['host'],
+            $db_config['port'],
+            $db_config['database'],
+            $db_config['user'],
+            $db_config['password']
         );
 
         $pdo = new \PDO($connection_string);

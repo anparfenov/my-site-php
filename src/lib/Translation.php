@@ -1,17 +1,16 @@
 <?
 
 namespace Mysite\Lib;
-
+// TODO: read data from config
 class Translation
 {
     static $instance;
-    const TRANSLATIONS_DIR = '/src/static/translations';
     static $translations = [];
-    static $locale = 'ru';
 
     private static function read_translations()
     {
-        $files = scandir(FileUtils::absDir(self::TRANSLATIONS_DIR));
+        $config = AppConfig::config('app');
+        $files = scandir(FileUtils::abs_dir($config['translations_dir']));
 
         $translations = [];
         foreach ($files as $file) {
@@ -19,7 +18,12 @@ class Translation
                 continue;
             }
 
-            $file_path = FileUtils::absDir(self::TRANSLATIONS_DIR . "/" . $file);
+            $file_path = FileUtils::abs_dir($config['translations_dir'] . $file);
+
+            if (is_dir($file_path)) {
+                continue;
+            }
+
             $file_contents = file_get_contents($file_path);
             if (!$file_contents) {
                 continue;
@@ -52,14 +56,15 @@ class Translation
             return $key;
         }
 
-        if (!isset(static::$translations[$ns][static::$locale])) {
+        $config = AppConfig::config('app');
+        if (!isset(static::$translations[$ns][$config['lang']])) {
             return $key;
         }
 
-        if (!isset(static::$translations[$ns][static::$locale][$key])) {
+        if (!isset(static::$translations[$ns][$config['lang']][$key])) {
             return $key;
         }
 
-        return static::$translations[$ns][static::$locale][$key];
+        return static::$translations[$ns][$config['lang']][$key];
     }
 }
