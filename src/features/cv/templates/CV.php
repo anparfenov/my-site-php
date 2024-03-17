@@ -1,5 +1,6 @@
 <?php
 
+use Mysite\Lib\AppConfig;
 use Mysite\Lib\FileUtils;
 use Mysite\Lib\Translation;
 ?>
@@ -7,6 +8,11 @@ use Mysite\Lib\Translation;
 <?php ob_start() ?>
 <h1><?= Translation::t('cv', 'title') ?></h1>
 <div><?= Translation::t('cv', 'profession') ?></div>
+<div class="CVLinks">
+    <? foreach (AppConfig::config('info')['my_links'] as $link) : ?>
+        <a href="<?= $link['href'] ?>"><?= $link['name'] ?></a>
+    <? endforeach; ?>
+</div>
 <section>
     <h2><?= Translation::t('cv', 'skills') ?></h2>
     <ul>

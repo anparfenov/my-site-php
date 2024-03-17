@@ -32,6 +32,8 @@ figcaption {
   --padding-main-h: 8px;
   --padding-main-v: 8px;
 
+  --padding-block: 4px;
+
   --max-width: 768px;
 }
 
@@ -91,4 +93,8 @@ figcaption {
   display: flex;
   align-items: center;
   gap: 10px;
+}
+
+.CVLinks {
+  margin-top: var(--padding-block);
 }
